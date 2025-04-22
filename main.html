@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RuralFix</title>
+  <link rel="stylesheet" th:href="@{/main.css}" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+</head>
+
+<body class="landing-page">
+  <div class="hero-image"></div>
+
+  <header>
+    <img th:src="@{/images/the-karnataka-government-kannada-logo-png_seeklogo-407164.png}" src="images/the-karnataka-government-kannada-logo-png_seeklogo-407164.png" alt="Karnataka Govt Logo" class="logo">
+    <div class="RuralFix"><center>RuralFix - Village Problem Reporting System</center></div>
+    <p><center>Empowering Rural Karnataka through Technology & Transparency</center></p>
+  </header>
+
+  <section class="form-section">
+    <form class="report-form" th:action="@{/submitReport}" method="post" enctype="multipart/form-data" th:object="${report}">
+      <h2>Report a Problem</h2>
+  
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" th:field="*{name}" placeholder="John D. Smith" required
+               pattern="[A-Za-z\s.]{2,50}"
+               title="Only letters, spaces, and full stops allowed (2–50 characters)"
+               oninput="this.value = this.value.replace(/[^A-Za-z\s.]/g, '')">
+      </div>      
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" th:field="*{email}" placeholder="example@gmail.com" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" th:field="*{phone}" required placeholder="+91 98765 43210"
+               pattern="^\+91\s[6-9]\d{4}\s\d{5}$"
+               title="Enter phone number in +91 98765 43210 format"
+               oninput="this.value = this.value.replace(/[^0-9+\s]/g, '')">
+      </div>      
+  
+      <div class="form-group">
+        <label for="aadhaar">Aadhaar Number</label>
+        <input type="text" id="aadhaar" th:field="*{aadhaar}" required maxlength="12"
+               pattern="\d{12}" title="Enter exactly 12 digits. No letters allowed."
+               oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+      </div>
+      
+  
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" th:field="*{address}" placeholder="123 Street Name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="village">Village</label>
+        <input type="text" id="village" th:field="*{village}" pattern="[A-Za-z\s.]+" required
+               title="Only alphabets, spaces, and full stops allowed">
+      </div>
+  
+      <div class="form-group">
+        <label for="taluk">Taluk</label>
+        <input type="text" id="taluk" th:field="*{taluk}" pattern="[A-Za-z\s.]+" required
+               title="Only alphabets, spaces, and full stops allowed">
+      </div>
+  
+      <div class="form-group">
+        <label for="district">District</label>
+        <input type="text" id="district" th:field="*{district}" pattern="[A-Za-z\s.]+" required
+               title="Only alphabets, spaces, and full stops allowed">
+      </div>
+  
+      <div class="form-group">
+        <label for="pincode">Pincode</label>
+        <input type="text" id="pincode" th:field="*{pincode}" pattern="\d{6}" maxlength="6"
+               inputmode="numeric" required title="Enter a 6-digit pincode. No letters allowed."
+               oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+      </div>
+      
+  
+      <div class="form-group">
+        <label for="problemDomain">Problem Domain</label>
+        <select id="problemDomain" th:field="*{problemDomain}" required>
+          <option value="" disabled selected hidden>Select Problem Domain</option>
+          <option>Water Supply</option>
+          <option>Electricity</option>
+          <option>Road Damage</option>
+          <option>Sanitation</option>
+          <option>Hospital accessebility</option> 
+          <option>Ration Society</option>
+          <option>Transportation</option>
+          <option>Drainage</option>
+          <option>Others</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="problemImage">Upload Image</label>
+        <input type="file" id="problemImage" th:field="*{problemImage}" accept="image/*">
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Problem Description</label>
+        <textarea id="description" th:field="*{description}" minlength="15" required
+                  placeholder="Describe the issue in at least 15 characters"></textarea>
+      </div>
+  
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+  

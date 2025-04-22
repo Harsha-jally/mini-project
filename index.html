@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RuralFix</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/styles.css}" href="styles.css">
+
+</head>
+<body class="landing-page">
+  <div class="hero-image"></div>
+
+  <header>
+    <img th:src="@{/images/the-karnataka-government-kannada-logo-png_seeklogo-407164.png}" src="images/the-karnataka-government-kannada-logo-png_seeklogo-407164.png" alt="Karnataka Govt Logo" class="logo">
+    <div class="RuralFix"><center>RuralFix-Village Problem Reporting System</center></div>
+    <p><center>Empowering Rural Karnataka through Technology & Transparency</center></p>
+  </header>
+
+  <!-- 🔼 Moved button here, above the text -->
+  <a th:href="@{/main}" href="main.html" class="btn fixed-btn">Report a Problem</a>
+
+  <section class="intro">
+    <p>Empowering Rural Karnataka through Technology & Transparency. RuralFix is designed to bridge the gap between villagers and government authorities. It provides a simple and transparent way for citizens to report problems they face daily. Whether it’s a damaged road, lack of clean water, or inconsistent electricity, every voice matters. This system ensures that each complaint is tracked and escalated until it is resolved. By using digital tools, we bring faster solutions and greater accountability to rural governance. Villagers can now participate actively in shaping their communities' growth and well-being. The platform promotes awareness of civic rights and encourages responsible feedback from users. Officials receive structured reports, helping them act efficiently and transparently.</p>
+    <p class="main-goal"><b>Main Goal:</b> To create an inclusive, technology-driven ecosystem that empowers rural citizens to bring positive change.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Government of Karnataka</p>
+  </footer>
+</body>
+</html>

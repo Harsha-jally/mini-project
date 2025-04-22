@@ -1,0 +1,160 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.logo {
+  position: absolute;
+  width: 8%;
+  height: 15%;
+  left:7%;
+  top:10%;
+  margin-bottom: 10px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+.intro {
+  text-align: center;
+  padding: 30px;
+}
+
+.hero-img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.hero-image{
+  background-image: url("images/istockphoto-484949147-612x612.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 60px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+
+.btn:hover {
+  background-color: #004a99;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #e9ecef;
+  margin-top: 5%;
+}
+.logo.left-logo {
+      
+      width: 10px;
+      height: 60px;
+      left:8%;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: multiply;
+}
+
+.RuralFix {
+  font-size: 3.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  bottom: 6%;
+  right: 25%;
+  margin-top: 40px; 
+}
+
+p {
+  line-height: 1.6; 
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 1.1rem; 
+  max-width: 90%; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+.main-goal {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.fixed-btn {
+  display: block;
+  width: fit-content;
+  margin: 60px auto 20px auto;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 60px; 
+  }
+
+  .logo {
+    position: relative;
+    width: 80px;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .RuralFix {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .RuralFix {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
