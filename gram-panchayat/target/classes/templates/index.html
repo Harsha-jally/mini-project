@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RuralFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.logo {
+  position: absolute;
+  width: 8%;
+  height: 15%;
+  left:7%;
+  top:10%;
+  margin-bottom: 10px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+.intro {
+  text-align: center;
+  padding: 30px;
+}
+
+.hero-img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.hero-image{
+  background-image: url("images/istockphoto-484949147-612x612.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 60px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+
+.btn:hover {
+  background-color: #004a99;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #e9ecef;
+  margin-top: 5%;
+}
+.logo.left-logo {
+
+      width: 10px;
+      height: 60px;
+      left:8%;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: multiply;
+}
+
+.RuralFix {
+  font-size: 3.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  bottom: 6%;
+  right: 25%;
+  margin-top: 40px;
+}
+
+p {
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 1.1rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-goal {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.fixed-btn {
+  display: block;
+  width: fit-content;
+  margin: 60px auto 20px auto;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 60px;
+  }
+
+  .logo {
+    position: relative;
+    width: 80px;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .RuralFix {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .RuralFix {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+  </style>
+
+</head>
+<body class="landing-page">
+  <div class="hero-image"></div>
+
+  <header>
+    <img th:src="@{/images/Karnatka-Gov-Logo.png}" src="images/the-karnataka-government-kannada-logo-png_seeklogo-407164.png" alt="Karnataka Govt Logo" class="logo">
+    <div class="RuralFix"><center>RuralFix-Village Problem Reporting System</center></div>
+    <p><center>Empowering Rural Karnataka through Technology & Transparency</center></p>
+  </header>
+
+  <!-- 🔼 Moved button here, above the text -->
+  <a th:href="@{/main}" href="main.html" class="btn fixed-btn">Report a Problem</a>
+
+  <section class="intro">
+    <p>Empowering Rural Karnataka through Technology & Transparency. RuralFix is designed to bridge the gap between villagers and government authorities. It provides a simple and transparent way for citizens to report problems they face daily. Whether it’s a damaged road, lack of clean water, or inconsistent electricity, every voice matters. This system ensures that each complaint is tracked and escalated until it is resolved. By using digital tools, we bring faster solutions and greater accountability to rural governance. Villagers can now participate actively in shaping their communities' growth and well-being. The platform promotes awareness of civic rights and encourages responsible feedback from users. Officials receive structured reports, helping them act efficiently and transparently.</p>
+    <p class="main-goal"><b>Main Goal:</b> To create an inclusive, technology-driven ecosystem that empowers rural citizens to bring positive change.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Government of Karnataka</p>
+  </footer>
+</body>
+</html>
